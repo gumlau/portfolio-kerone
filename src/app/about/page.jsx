@@ -3,12 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
+import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
 function SocialLink({ className, href, children, icon: Icon }) {
@@ -126,9 +121,6 @@ export default function About() {
             </SocialLink>
             <SocialLink href="https://github.com/gumlau" icon={GitHubIcon} className="mt-4">
               Follow on GitHub
-            </SocialLink>
-            <SocialLink href="https://x.com/gumliu" icon={XIcon} className="mt-4">
-              Follow on X
             </SocialLink>
             <SocialLink
               href="https://www.linkedin.com/in/ganliu-dev"
