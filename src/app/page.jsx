@@ -14,6 +14,8 @@ import logoHelio from '@/images/logos/helio-stream.svg'
 import logoCosmos from '@/images/logos/cosmos.svg'
 import wegoLogo from '@/images/logos/wego_small.png'
 import nusLogo from '@/images/logos/NUS_coat_of_arms.svg.png'
+import mcgillLogo from '../../Mcgill.jpg'
+import sustechLogo from '../../sustech.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -237,7 +239,7 @@ function Education() {
     {
       institution: 'Southern University of Science and Technology (SUSTech)',
       degree: 'Bachelor of Science in Computer Science',
-      logo: nusLogo, // Placeholder for SUSTech logo
+      logo: sustechLogo,
       start: 'Sep 2022',
       end: 'Jun 2026',
       location: 'Shenzhen, China',
@@ -304,7 +306,7 @@ function Resume() {
     {
       company: 'McGill University',
       title: 'Research Intern (Mitacs & CSC Funded)',
-      logo: nusLogo, // Placeholder, will update with McGill logo later
+      logo: mcgillLogo,
       start: 'Jun 2025',
       end: 'Sep 2025',
       location: 'Montréal, Canada',
@@ -350,14 +352,24 @@ function Photos() {
 }
 
 export default async function Home() {
-  const featuredProject = {
-    name: 'Wave-CDAnet: Physics-Informed Neural Network for Water Wave Modeling',
-    description:
-      'Developed Wave-CDAnet, a physics-informed deep neural network that couples a 3D U-Net encoder with an implicit decoder and PDE residual regularization to recover multi-scale wave dynamics.',
-    stack: 'PyTorch / Scientific ML / Physics-Informed Learning',
-    cta: 'Explore research projects',
-    link: { href: '/projects' },
-  }
+  const featuredProjects = [
+    {
+      name: 'AI-Powered 3D Visualization System for Ophthalmic Surgery',
+      description:
+        'Implemented event-based depth estimation and monocular 3D reconstruction for ophthalmic surgery video, coordinating AI engineers and clinicians to deliver clinical review prototypes backed by 10,000 RMB innovation funding.',
+      stack: 'Surgical Vision / Event Cameras / 3D Reconstruction',
+      cta: 'Dive into surgical vision research',
+      link: { href: '/publications#surgmast3r-slam' },
+    },
+    {
+      name: 'Wego Travel Insights Dashboard',
+      description:
+        'Led an enterprise strategic planning analytics dashboard end to end, unlocking a 300% efficiency lift and presenting the product roadmap at WiT conferences in Dubai and Japan.',
+      stack: 'Product Analytics / React / Data Storytelling',
+      cta: 'View the live dashboard',
+      link: { href: 'https://wego-strategy.vercel.app/' },
+    },
+  ]
 
   return (
     <>
@@ -388,10 +400,12 @@ export default async function Home() {
           <div className="flex flex-col gap-16">
             <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
               <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                <span className="ml-3">Featured Project</span>
+                <span className="ml-3">Featured Projects</span>
               </h2>
-              <div className="mt-6">
-                <Article article={featuredProject} />
+              <div className="mt-6 space-y-6">
+                {featuredProjects.map((project) => (
+                  <Article key={project.name} article={project} />
+                ))}
               </div>
             </div>
           </div>
