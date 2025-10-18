@@ -1,99 +1,36 @@
-import Image from 'next/image'
-
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-
-function NextjsIcon() {
-  return (
-    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-8">
-      <mask
-        id="mask0_408_134"
-        style={{ maskType: 'alpha' }}
-        maskUnits="userSpaceOnUse"
-        x="0"
-        y="0"
-        width="180"
-        height="180"
-      >
-        <circle cx="90" cy="90" r="90" fill="black" />
-      </mask>
-      <g mask="url(#mask0_408_134)">
-        <circle cx="90" cy="90" r="87" fill="black" stroke="white" strokeWidth="6" />
-        <path
-          d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z"
-          fill="url(#paint0_linear_408_134)"
-        />
-        <rect x="115" y="54" width="12" height="72" fill="url(#paint1_linear_408_134)" />
-      </g>
-      <defs>
-        <linearGradient
-          id="paint0_linear_408_134"
-          x1="109"
-          y1="116.5"
-          x2="144.5"
-          y2="160.5"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="white" />
-          <stop offset="1" stopColor="white" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient
-          id="paint1_linear_408_134"
-          x1="121"
-          y1="54"
-          x2="120.799"
-          y2="106.875"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="white" />
-          <stop offset="1" stopColor="white" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-    </svg>
-  )
-}
 
 const projects = [
   {
     name: 'Lumilib: Curated Knowledge Community Platform',
     description: 'Founded and scaled knowledge curation platform serving 30,000+ active readers with daily, weekly, and monthly content delivery. Built sustainable community ecosystem with 600+ curated articles, focusing on "first-hand rather than retold, timeless rather than trending" content strategy.',
     link: { href: 'https://www.lumilib.com/main', label: 'Visit Lumilib' },
-    icon: NextjsIcon,
   },
   {
     name: 'BotHub: P2P AI Chatbot Platform & Marketplace',
     description: 'Built comprehensive chatbot platform combining real-time conversation interface with P2P bot marketplace functionality. Features include multi-bot conversations, bot discovery, rating systems, and integrated payment workflows using Claude API and modern web technologies.',
     link: { href: '#', label: 'Platform Demo' },
-    icon: NextjsIcon,
   },
   {
     name: 'Wego Travel Insights Dashboard',
     description: 'Led complete product lifecycle from stakeholder interviews to global deployment for enterprise strategic planning dashboard. Product successfully showcased at industry conferences and adopted company-wide, achieving 300% efficiency improvement in strategic planning.',
     link: { href: 'https://wego-strategy.vercel.app/', label: 'View Dashboard' },
-    icon: NextjsIcon,
   },
   {
     name: 'AI-Powered 3D Visualization System for Ophthalmic Surgery',
     description: 'Designed system architecture balancing medical safety requirements with intuitive user experience for surgical environments. Led cross-disciplinary team coordination and delivered comprehensive technical documentation, securing 10,000 RMB innovation funding.',
     link: { href: '#', label: 'Technical Documentation' },
-    icon: NextjsIcon,
   },
   {
     name: 'Next.js SEO Blog Starter Template',
     description: 'Built and deployed open-source blog template with comprehensive SEO optimization, gaining 53+ GitHub stars and community adoption. Features one-click Vercel deployment, markdown-based content management, and mobile-optimized interface using Next.js 14 and TypeScript.',
     link: { href: 'https://nextjs-seo-blog-starter.vercel.app', label: 'View Demo' },
-    icon: NextjsIcon,
   },
   {
     name: 'Biomimetic AUV and Subsea Cable Recognition System',
     description: 'Developed biomimetic autonomous underwater vehicle integrated with vision-based cable detection and positioning capabilities. Created virtual underwater dataset and optimized recognition algorithms for complex subsea environments. Supervised by Academician Lin Jian, secured 15,000 RMB government funding.',
     link: { href: 'https://gumlau.github.io/RayVision/', label: 'View Project' },
-    icon: NextjsIcon,
   },
 ]
 
@@ -125,9 +62,6 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <project.icon />
-            </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
