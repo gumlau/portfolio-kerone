@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
-const contactEmail = 'gan.liu@mail.mcgill.ca'
+const contactEmail = 'keronelau@gmail.com'
 
 const publications = [
   {
@@ -11,6 +11,8 @@ const publications = [
     index: 1,
     title:
       'SurgMASt3R-SLAM: Robust Real-Time Surgical Scene 3D Reconstruction by Adapting 3D Foundation Model',
+    link: 'https://anonymous.4open.science/w/SurgMASt3R-SLAM-4183/',
+    cta: 'View project site',
     authors: [
       { name: 'Xiaoxi Lu', affiliation: '1' },
       { name: 'Gan Liu', affiliation: '1', emphasis: true },
@@ -106,7 +108,7 @@ export default function PublicationsPage() {
         className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-2"
       >
         {publications.map((publication) => {
-          const href = buildMailtoLink(publication.title)
+          const href = publication.link ?? buildMailtoLink(publication.title)
 
           return (
             <Card as="li" key={publication.id} id={publication.id}>
@@ -121,7 +123,7 @@ export default function PublicationsPage() {
               <p className="relative z-10 mt-4 text-sm text-zinc-500 dark:text-zinc-400">
                 {publication.meta}
               </p>
-              <Card.Cta>Request preprint</Card.Cta>
+              <Card.Cta>{publication.cta ?? 'Request preprint'}</Card.Cta>
             </Card>
           )
         })}

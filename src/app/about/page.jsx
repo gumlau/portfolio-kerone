@@ -34,7 +34,7 @@ function MailIcon(props) {
 export const metadata = {
   title: 'About',
   description:
-    "I'm Gan Liu, an AI Product Developer and Data Scientist with experience in machine learning, product strategy, and business analytics across multiple continents.",
+    "I'm Gan Liu, a Computer Science student researching scientific machine learning, robotics, and data-driven decision systems across academic and industry collaborations.",
 }
 
 export default function About() {
@@ -53,30 +53,29 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            AI Product Developer, Data Scientist, and Entrepreneur
+            Scientific Machine Learning Researcher and Applied Data Scientist
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I&apos;m a Computer Science student at SUSTech with a passion for building products that solve real-world problems. 
-              My journey spans from founding Lumilib, a knowledge curation platform serving 30,000+ readers, to developing 
-              machine learning pipelines for agricultural research at McGill University.
+              I&apos;m a Computer Science student at SUSTech focused on scientific machine learning and robotics. My research spans 
+              physics-informed modeling, surgical vision, and agricultural analytics—domains where rigorous computation meets 
+              impactful real-world deployments.
             </p>
             <p>
-              Currently, I&apos;m gaining international experience through research at McGill University and business development 
-              at WeGo Singapore. My technical expertise includes Python, JavaScript, machine learning, and modern web 
-              technologies like Next.js and TypeScript. I&apos;m particularly skilled at bridging the gap between complex 
-              technical solutions and user-centered product experiences.
+              At McGill University, I build machine learning pipelines that fuse multitemporal drone imagery with agronomic 
+              expertise to forecast crop yield and seed quality. Previously at Wego Singapore, I translated business questions 
+              into data products—launching a strategic planning dashboard that lifted decision-making efficiency by 300% and 
+              presenting market insights at international conferences in Dubai and Japan.
             </p>
             <p>
-              I&apos;ve been recognized for my work, including winning Silver Prize in the Shokz Cup Competition and securing 
-              government funding for innovative AI projects. I&apos;m passionate about using AI and data science to create 
-              meaningful impact, whether that&apos;s through optimizing agricultural yields, building community platforms, 
-              or developing intuitive user interfaces.
+              My projects explore frontier intersections of AI and physical systems—from Wave-CDAnet, a physics-informed neural 
+              network for water wave super-resolution, to event-based depth estimation for ophthalmic surgery and biomimetic 
+              underwater robotics funded by municipal innovation grants.
             </p>
             <p>
-              Beyond coding, I enjoy presenting at international conferences and have spoken in Dubai and Japan about 
-              strategic planning and product insights. I believe in &ldquo;first-hand rather than retold, timeless rather 
-              than trending&rdquo; — a philosophy that drives both my content curation work and product development approach.
+              I&apos;m an active contributor to academic collaborations, with manuscripts under review at ICRA and in preparation 
+              for surgical vision and scientific computing journals. Whether in research labs or product teams, I thrive on 
+              bridging rigorous analysis with clear communication and collaborative execution.
             </p>
           </div>
         </div>
@@ -90,34 +89,30 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-sm">
               <div>
-                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Product Management</h3>
-                <p className="text-zinc-600 dark:text-zinc-400">User Research, Product Strategy, MVP Design, Roadmap Planning, Cross-functional Collaboration</p>
+                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Applied Mathematics & Modeling</h3>
+                <p className="text-zinc-600 dark:text-zinc-400">Partial Differential Equations, Numerical Methods, Scientific Computing, Fluid Dynamics Modeling</p>
               </div>
               <div>
-                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">AI/ML Product Development</h3>
-                <p className="text-zinc-600 dark:text-zinc-400">LLM Integration, Computer Vision Applications, AI-Human Interaction Design</p>
+                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Machine Learning for Science</h3>
+                <p className="text-zinc-600 dark:text-zinc-400">Physics-Informed Neural Networks, Spatiotemporal Modeling, Computer Vision, Deep Learning Architectures</p>
               </div>
               <div>
-                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Technical Skills</h3>
-                <p className="text-zinc-600 dark:text-zinc-400">Python, JavaScript, SQL, Git, Cursor, GitHub Copilot, Claude Code</p>
+                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Programming & Tools</h3>
+                <p className="text-zinc-600 dark:text-zinc-400">Python, PyTorch, MATLAB, C++, SQL, Git, CUDA, LaTeX</p>
               </div>
               <div>
-                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Low-code/No-code Platforms</h3>
-                <p className="text-zinc-600 dark:text-zinc-400">Figma, Webflow, Tableau, Power BI (experienced with rapid prototyping workflows)</p>
+                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Data & Visualization</h3>
+                <p className="text-zinc-600 dark:text-zinc-400">Multivariate Analysis, Time-Series Modeling, Synthetic Data Generation, Scientific Visualization (Matplotlib, ParaView)</p>
               </div>
               <div>
-                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Data & Analytics</h3>
-                <p className="text-zinc-600 dark:text-zinc-400">User Behavior Analysis, A/B Testing, KPI Design, Business Intelligence, BigQuery</p>
-              </div>
-              <div>
-                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Design & UX</h3>
-                <p className="text-zinc-600 dark:text-zinc-400">Information Architecture, Interaction Design, User Journey Mapping, Wireframing</p>
+                <h3 className="font-medium text-zinc-900 dark:text-zinc-100 mb-2">Research & Communication</h3>
+                <p className="text-zinc-600 dark:text-zinc-400">Academic Writing, Technical Documentation, Cross-disciplinary Collaboration, Conference Presentations</p>
               </div>
             </div>
           </div>
           <ul role="list">
-            <SocialLink href="mailto:gan.liu@mail.mcgill.ca" icon={MailIcon}>
-              gan.liu@mail.mcgill.ca
+            <SocialLink href="mailto:keronelau@gmail.com" icon={MailIcon}>
+              keronelau@gmail.com
             </SocialLink>
             <SocialLink href="https://github.com/gumlau" icon={GitHubIcon} className="mt-4">
               Follow on GitHub

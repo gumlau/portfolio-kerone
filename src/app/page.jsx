@@ -19,7 +19,6 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 function MailIcon(props) {
@@ -132,6 +131,8 @@ function NextjsIcon() {
 }
 
 function Article({ article }) {
+  const eyebrow = article.stack ?? (article.date ? formatDate(article.date) : null)
+
   return (
     <Card as="article">
       <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
@@ -140,11 +141,9 @@ function Article({ article }) {
       <Card.Title href={article.link.href}>
         {article.name}
       </Card.Title>
-      <Card.Eyebrow decorate>
-        Next.js 14 / TypeScript / Tailwind CSS
-      </Card.Eyebrow>
+      {eyebrow && <Card.Eyebrow decorate>{eyebrow}</Card.Eyebrow>}
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>View project</Card.Cta>
+      <Card.Cta>{article.cta ?? 'View project'}</Card.Cta>
     </Card>
   )
 }
@@ -242,7 +241,7 @@ function Education() {
       start: 'Sep 2022',
       end: 'Jun 2026',
       location: 'Shenzhen, China',
-      details: 'GPA: 3.79/4.0 | Coursework: Computer Architecture, Data Analytics, Machine Learning, HCI'
+      details: 'GPA: 3.79/4.0 | Coursework: Computer Architecture, Data Analytics, Machine Learning'
     },
     {
       institution: 'National University of Singapore (NUS)',
@@ -251,7 +250,7 @@ function Education() {
       start: 'Jan 2025',
       end: 'Jun 2025',
       location: 'Singapore',
-      details: 'NUS NOC Inbound Programme | Coursework: Business Analytics, Venture Creation, Product Strategy, UX Design'
+      details: 'NUS NOC Inbound Programme | Coursework: Business Analytics, Venture Creation, Product Strategy, User Experience Design'
     }
   ]
 
@@ -304,12 +303,12 @@ function Resume() {
   let resume = [
     {
       company: 'McGill University',
-      title: 'Data Science Research Intern',
+      title: 'Research Intern (Mitacs & CSC Funded)',
       logo: nusLogo, // Placeholder, will update with McGill logo later
       start: 'Jun 2025',
       end: 'Sep 2025',
       location: 'Montréal, Canada',
-      details: 'Machine learning pipelines for crop yield prediction using multitemporal drone imagery'
+      details: 'Developing machine learning pipelines for crop yield and seed quality prediction using multitemporal drone data.'
     },
     {
       company: 'Wego Pte Ltd',
@@ -318,25 +317,16 @@ function Resume() {
       start: 'Jan 2025',
       end: 'Jun 2025',
       location: 'Singapore',
-      details: 'Built MVP strategic planning dashboard, presented at international conferences'
-    },
-    {
-      company: 'Cuboid.AI',
-      title: 'AI Product Developer',
-      logo: nusLogo, // Placeholder
-      start: 'Jun 2024',
-      end: 'Aug 2024',
-      location: 'Remote',
-      details: 'Fine-tuned LLMs for user scenarios, awarded Silver Prize in Shokz Cup Competition'
+      details: 'Designed strategic planning dashboard MVP with 300% efficiency lift; presented insights at WiT conferences in Dubai and Japan.'
     },
     {
       company: 'National University of Singapore',
-      title: 'Entrepreneurship & Business Analytics Student',
+      title: 'Entrepreneurship (NUS NOC Inbound Programme)',
       logo: nusLogo,
       start: 'Jan 2025',
       end: 'Jun 2025',
       location: 'Singapore',
-      details: 'NUS NOC Inbound Programme focusing on venture creation and product strategy'
+      details: 'Focused on venture creation, product strategy, and analytics through immersive coursework and studio projects.'
     },
   ]
 
@@ -361,9 +351,12 @@ function Photos() {
 
 export default async function Home() {
   const featuredProject = {
-    name: 'Next.js SEO Blog Starter',
-    description: 'A modern, SEO-optimized blog starter template built with Next.js 14, TypeScript, and Tailwind CSS. Features include App Router, Server Components, built-in SEO optimization, and mobile-first responsive design.',
-    link: { href: 'https://github.com/gumlau/nextjs-seo-blog-starter' },
+    name: 'Wave-CDAnet: Physics-Informed Neural Network for Water Wave Modeling',
+    description:
+      'Developed Wave-CDAnet, a physics-informed deep neural network that couples a 3D U-Net encoder with an implicit decoder and PDE residual regularization to recover multi-scale wave dynamics.',
+    stack: 'PyTorch / Scientific ML / Physics-Informed Learning',
+    cta: 'Explore research projects',
+    link: { href: '/projects' },
   }
 
   return (
@@ -371,10 +364,10 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            AI Product Developer, Data Scientist, and Business Analyst
+            Scientific Machine Learning Researcher & Applied Data Scientist
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Gan Liu, an AI Product Developer and Data Scientist with experience in machine learning, product strategy, and business analytics. Currently pursuing Computer Science at SUSTech while gaining international experience through research at McGill University and business development at WeGo Singapore.
+            I&apos;m Gan Liu, a Computer Science student at SUSTech (GPA 3.79/4.0) researching physics-informed machine learning, surgical vision, and data-driven decision systems. I currently develop multitemporal crop yield pipelines as a Mitacs & CSC funded research intern at McGill University and previously built analytics products at Wego Singapore showcased at WiT conferences in Dubai and Japan.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

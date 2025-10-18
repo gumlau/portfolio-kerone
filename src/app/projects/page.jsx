@@ -3,34 +3,46 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 
 const projects = [
   {
-    name: 'Lumilib: Curated Knowledge Community Platform',
-    description: 'Founded and scaled knowledge curation platform serving 30,000+ active readers with daily, weekly, and monthly content delivery. Built sustainable community ecosystem with 600+ curated articles, focusing on "first-hand rather than retold, timeless rather than trending" content strategy.',
-    link: { href: 'https://www.lumilib.com/main', label: 'Visit Lumilib' },
-  },
-  {
-    name: 'BotHub: P2P AI Chatbot Platform & Marketplace',
-    description: 'Built comprehensive chatbot platform combining real-time conversation interface with P2P bot marketplace functionality. Features include multi-bot conversations, bot discovery, rating systems, and integrated payment workflows using Claude API and modern web technologies.',
-    link: { href: '#', label: 'Platform Demo' },
-  },
-  {
-    name: 'Wego Travel Insights Dashboard',
-    description: 'Led complete product lifecycle from stakeholder interviews to global deployment for enterprise strategic planning dashboard. Product successfully showcased at industry conferences and adopted company-wide, achieving 300% efficiency improvement in strategic planning.',
-    link: { href: 'https://wego-strategy.vercel.app/', label: 'View Dashboard' },
+    name: 'Wave-CDAnet: Physics-Informed Neural Network for Water Wave Modeling',
+    description:
+      'Developed a physics-informed neural network that combines a 3D U-Net encoder with an implicit decoder and Rayleigh–Bénard PDE residual regularization to recover multi-scale wave dynamics at super-resolution.',
+    link: { href: '/publications#wave-cdanet', label: 'Publication details' },
   },
   {
     name: 'AI-Powered 3D Visualization System for Ophthalmic Surgery',
-    description: 'Designed system architecture balancing medical safety requirements with intuitive user experience for surgical environments. Led cross-disciplinary team coordination and delivered comprehensive technical documentation, securing 10,000 RMB innovation funding.',
-    link: { href: '#', label: 'Technical Documentation' },
-  },
-  {
-    name: 'Next.js SEO Blog Starter Template',
-    description: 'Built and deployed open-source blog template with comprehensive SEO optimization, gaining 53+ GitHub stars and community adoption. Features one-click Vercel deployment, markdown-based content management, and mobile-optimized interface using Next.js 14 and TypeScript.',
-    link: { href: 'https://nextjs-seo-blog-starter.vercel.app', label: 'View Demo' },
+    description:
+      'Implemented event-based depth estimation and 3D reconstruction from monocular surgical video, coordinating AI engineers and clinicians to deliver prototypes that secured 10,000 RMB innovation funding.',
+    link: { href: '/publications#surgmast3r-slam', label: 'Surgical vision research' },
   },
   {
     name: 'Biomimetic AUV and Subsea Cable Recognition System',
-    description: 'Developed biomimetic autonomous underwater vehicle integrated with vision-based cable detection and positioning capabilities. Created virtual underwater dataset and optimized recognition algorithms for complex subsea environments. Supervised by Academician Lin Jian, secured 15,000 RMB government funding.',
-    link: { href: 'https://gumlau.github.io/RayVision/', label: 'View Project' },
+    description:
+      'Designed a biomimetic autonomous underwater vehicle with synthetic dataset generation and subsea cable recognition, supervised by Academician Lin Jian and funded with 15,000 RMB municipal innovation support.',
+    link: { href: 'https://gumlau.github.io/RayVision/', label: 'View project' },
+  },
+  {
+    name: 'Wego Travel Insights Dashboard',
+    description:
+      'Led the product lifecycle for an enterprise strategic planning dashboard adopted company-wide, delivering a 300% efficiency lift and showcasing insights at WiT conferences in Dubai and Japan.',
+    link: { href: 'https://wego-strategy.vercel.app/', label: 'View dashboard' },
+  },
+  {
+    name: 'Lumilib: Curated Knowledge Community Platform',
+    description:
+      'Founded and scaled a knowledge curation community serving 30,000+ readers with 600+ curated articles guided by the principle “first-hand rather than retold, timeless rather than trending”.',
+    link: { href: 'https://www.lumilib.com/main', label: 'Visit Lumilib' },
+  },
+  {
+    name: 'Next.js SEO Blog Starter Template',
+    description:
+      'Built an open-source Next.js 14 + TypeScript blog starter focused on SEO, mobile responsiveness, and one-click Vercel deployment, earning 50+ GitHub stars and community adoption.',
+    link: { href: 'https://nextjs-seo-blog-starter.vercel.app', label: 'View demo' },
+  },
+  {
+    name: 'BotHub: P2P AI Chatbot Platform & Marketplace',
+    description:
+      'Built a peer-to-peer chatbot platform combining real-time conversations, bot discovery, ratings, and integrated payments to help developers monetise custom AI agents using ChatGPT API.',
+    link: { href: 'mailto:keronelau@gmail.com?subject=BotHub%20Demo', label: 'Request demo' },
   },
 ]
 
@@ -46,15 +58,16 @@ function LinkIcon(props) {
 }
 
 export const metadata = {
-  title: 'Product Experience',
-  description: 'A comprehensive showcase of my product development projects, from AI platforms to community-driven applications.',
+  title: 'Projects',
+  description:
+    'Selected research and product initiatives spanning scientific machine learning, robotics, analytics, community platforms, and developer tooling.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Product Experience Portfolio"
-      intro="From founding a knowledge curation platform serving 30,000+ readers to developing AI-powered surgical systems, here's a comprehensive showcase of my product development journey across various domains."
+      title="Projects Portfolio"
+      intro="A broad look at the research, product, and community initiatives I’ve led—from physics-informed ML and surgical vision to analytics platforms, open-source tooling, and knowledge communities."
     >
       <ul
         role="list"

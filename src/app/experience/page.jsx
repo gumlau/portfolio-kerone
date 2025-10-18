@@ -4,14 +4,15 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 const experiences = [
   {
     company: 'McGill University',
-    role: 'Data Science Research Intern',
+    role: 'Research Intern (Mitacs & CSC Funded)',
     timeframe: 'Jun 2025 – Sep 2025',
     location: 'Montréal, Canada',
     summary:
-      'Built machine learning pipelines for multitemporal drone imagery to improve crop yield prediction and decision-making for agricultural stakeholders.',
+      'Developing scientific machine learning pipelines that integrate multitemporal drone imagery with agronomic expertise to forecast crop yield and seed quality.',
     highlights: [
-      'Designed end-to-end data ingestion and preprocessing workflows for hyperspectral datasets.',
-      'Benchmarked ensemble models versus physics-informed baselines to quantify yield forecast accuracy.',
+      'Designed end-to-end data ingestion, preprocessing, and validation workflows for hyperspectral datasets.',
+      'Benchmarked temporal ML models and physics-informed baselines to quantify yield forecast accuracy and model robustness.',
+      'Built correlation analyses linking drone-derived features with breeder panel ratings to inform seed selection decisions.',
     ],
   },
   {
@@ -20,10 +21,11 @@ const experiences = [
     timeframe: 'Jan 2025 – Jun 2025',
     location: 'Singapore',
     summary:
-      'Led strategic analytics initiatives supporting the international launch of a travel intelligence dashboard.',
+      'Led analytics initiatives to launch a strategic planning dashboard adopted across international business units.',
     highlights: [
-      'Partnered with executives to scope KPIs and product requirements for global planning workflows.',
-      'Delivered dashboards showcased at industry conferences, achieving a 300% efficiency lift in strategic planning.',
+      'Designed and built the MVP dashboard from concept to deployment, driving a 300% efficiency improvement in planning workflows.',
+      'Created reusable Tableau templates and data source configurations to eliminate repetitive SQL reporting tasks.',
+      'Presented market intelligence at WiT conferences in Dubai and Japan, evangelising data-driven strategy.',
     ],
     link: {
       href: 'https://wego-strategy.vercel.app/',
@@ -31,27 +33,16 @@ const experiences = [
     },
   },
   {
-    company: 'Cuboid.AI',
-    role: 'AI Product Developer',
-    timeframe: 'Jun 2024 – Aug 2024',
-    location: 'Remote',
-    summary:
-      'Fine-tuned large language models for enterprise user scenarios and launched prototypes recognized in competition finals.',
-    highlights: [
-      'Implemented retrieval-augmented workflows to boost task completion success in customer support pilots.',
-      'Awarded Silver Prize in the Shokz Cup Competition for human-centered AI solution design.',
-    ],
-  },
-  {
     company: 'National University of Singapore',
-    role: 'Entrepreneurship & Business Analytics Scholar',
+    role: 'Entrepreneurship (NUS NOC Inbound Programme)',
     timeframe: 'Jan 2025 – Jun 2025',
     location: 'Singapore',
     summary:
       'Selected for the NUS NOC inbound programme focused on venture creation, analytics, and product strategy.',
     highlights: [
-      'Completed venture labs emphasising lean experimentation and market validation.',
-      'Collaborated with cross-cultural teams to prototype data-driven product experiences.',
+      'Completed venture labs emphasising lean experimentation, market validation, and product strategy.',
+      'Collaborated with cross-disciplinary teams on user research, analytics, and UX-driven product concepts.',
+      'Coursework: Business Analytics, Venture Creation, Product Strategy, User Experience Design.',
     ],
   },
 ]
