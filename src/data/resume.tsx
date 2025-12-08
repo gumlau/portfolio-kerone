@@ -65,7 +65,7 @@ export const DATA = {
       badges: [],
       location: "Montréal, Canada",
       title: "Research Intern (Mitacs & CSC Funded)",
-      logoUrl: "/Mcgill.jpg",
+      logoUrl: "/mcgill.svg",
       start: "Jun 2025",
       end: "Sep 2025",
       description:
@@ -77,7 +77,7 @@ export const DATA = {
       href: "https://wego.com",
       location: "Singapore",
       title: "Business Analyst",
-      logoUrl: "/logos/wego_small.png",
+      logoUrl: "/wego.png",
       start: "Jan 2025",
       end: "Jun 2025",
       description:
