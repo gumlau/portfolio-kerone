@@ -1,6 +1,19 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
+type Hackathon = {
+  title: string;
+  description: string;
+  dates: string;
+  location: string;
+  image?: string;
+  links?: readonly {
+    icon: React.ReactNode;
+    title: string;
+    href: string;
+  }[];
+};
+
 export const DATA = {
   name: "Gan Liu",
   initials: "GL",
@@ -207,5 +220,5 @@ export const DATA = {
       video: "",
     },
   ],
-  hackathons: [],
+  hackathons: [] as readonly Hackathon[],
 } as const;
